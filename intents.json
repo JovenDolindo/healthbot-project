@@ -1,0 +1,624 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "good morning", "hey", "musta", "kamusta", "good afternoon", "good evening"],
+      "responses": ["Hello! I am HealthBot (Created by Joven & Fuerzas). I can help with Sickness, Diet, First Aid, and General Health."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thank you", "thanks", "salamat", "tenkyu", "arigato"],
+      "responses": ["You're welcome! Stay healthy and drink water!"]
+    },
+    {
+      "tag": "bye",
+      "patterns": ["bye", "goodbye", "alis na", "see you", "babye"],
+      "responses": ["Goodbye! Don't forget to drink 8 glasses of water today."]
+    },
+    {
+      "tag": "creator",
+      "patterns": ["who made you", "who created you", "developer", "author", "sino gumawa"],
+      "responses": ["I was developed by the brilliant team of Joven Dolindo and Fuerzas."]
+    },
+    {
+      "tag": "pain_general",
+      "patterns": ["pain", "sakit", "hurt", "aray", "kirot", "ouch", "masakit", "so pain"],
+      "responses": ["I understand you are in pain. Can you tell me WHERE it hurts? (e.g., Head, Stomach, Back, Tooth)"]
+    },
+    {
+      "tag": "headache",
+      "patterns": ["head", "ulo", "migraine", "dizzy", "hilo", "headache", "masakit ulo", "head hurts"],
+      "responses": ["Headache Relief: 1. Drink water (dehydration causes headaches). 2. Rest in a dark, quiet room. 3. Take Paracetamol/Biogesic if needed."]
+    },
+    {
+      "tag": "stomach_ache",
+      "patterns": ["stomach", "tiyan", "belly", "tummy", "sikmura", "chan", "acid", "kabag", "stomach pain"],
+      "responses": ["Stomach Pain: Avoid spicy/oily foods. Drink ginger tea or warm water. If pain is severe or right-sided, consult a doctor."]
+    },
+    {
+      "tag": "toothache",
+      "patterns": ["tooth", "ngipin", "toothache", "sakit ngipin", "molar"],
+      "responses": ["Toothache: Rinse mouth with warm salt water. Apply a cold compress to the cheek. Take pain relievers and see a dentist ASAP."]
+    },
+    {
+      "tag": "flu",
+      "patterns": ["flu", "fever", "chills", "body ache", "temperature", "trangkaso", "lagnat", "sinat"],
+      "responses": ["Flu Advice: 1. Rest completely. 2. Drink lots of water/Gatorade. 3. Take Paracetamol for fever every 4 hours. If fever lasts >3 days, see a doctor."]
+    },
+    {
+      "tag": "cold",
+      "patterns": ["runny nose", "cold", "stuffy nose", "sneezing", "sipon", "barado ilong"],
+      "responses": ["Cold Relief: Stay hydrated, use a saline nasal spray, and rest. Steam inhalation (tuob) helps clear the nose."]
+    },
+    {
+      "tag": "cough",
+      "patterns": ["cough", "coughing", "dry cough", "ubo", "makati lalamunan", "plema"],
+      "responses": ["Cough Remedy: Drink warm calamansi or lemon water with honey. Avoid cold drinks/sweets. If cough lasts >1 week, consult a doctor."]
+    },
+    {
+      "tag": "sore_throat",
+      "patterns": ["throat", "lalamunan", "pain swallowing", "masakit lumunok", "tonsil"],
+      "responses": ["Sore Throat Relief: Gargle with warm salt water (1 tsp salt in 1 cup water). Drink warm tea with honey."]
+    },
+    {
+      "tag": "diarrhea",
+      "patterns": ["diarrhea", "lbm", "nagtatae", "watery stool", "poop", "tae"],
+      "responses": ["Diarrhea Advice: The most important thing is HYDRATION. Drink Oresol or Gatorade. Eat bananas and toast. Avoid milk."]
+    },
+    {
+      "tag": "back_pain",
+      "patterns": ["back pain", "lower back", "sakit likod", "stiff back", "spine", "likod"],
+      "responses": ["Back Pain: Improve your posture. Don't sit for too long. Apply a hot compress for muscle relaxation or cold compress for inflammation."]
+    },
+    {
+      "tag": "leg_cramps",
+      "patterns": ["cramps", "leg pain", "pulikat", "muscle spasm"],
+      "responses": ["Leg Cramps: Stretch the muscle gently. Massage the area. Eat potassium-rich foods like Bananas and drink water."]
+    },
+    {
+      "tag": "insomnia",
+      "patterns": ["cant sleep", "insomnia", "hard to sleep", "awake", "walang tulog", "tulog"],
+      "responses": ["Sleep Tips: 1. No phone 1 hour before bed (blue light keeps you awake). 2. Drink warm milk or chamomile tea. 3. Try 4-7-8 breathing."]
+    },
+    {
+      "tag": "stress",
+      "patterns": ["stressed", "anxiety", "tired", "burned out", "pagod", "mental health", "sad"],
+      "responses": ["Stress Management: Take a deep breath. Take a 10-minute walk. Talk to a friend. Remember, it's okay to take a break."]
+    },
+    {
+      "tag": "diet_general",
+      "patterns": ["diet", "healthy food", "nutrition", "what to eat", "food"],
+      "responses": ["General Diet: Eat more vegetables/fruits. Avoid processed foods and sugary drinks. Use the 'Pinggang Pinoy' guide (half plate veggies/fruit)."]
+    },
+    {
+      "tag": "weight_loss",
+      "patterns": ["lose weight", "papayat", "how to be thin", "burn fat", "belly fat", "payat"],
+      "responses": ["Weight Loss: create a 'Calorie Deficit' (eat less than you burn). Avoid rice/sweets at night. Do cardio exercises (jogging/walking)."]
+    },
+    {
+      "tag": "weight_gain",
+      "patterns": ["gain weight", "pataba", "how to be fat", "muscle gain", "taba"],
+      "responses": ["Weight Gain: Eat calorie-dense healthy foods like eggs, nuts, avocados, and meat. Eat more frequently (5-6 times a day)."]
+    },
+    {
+      "tag": "acne",
+      "patterns": ["acne", "pimples", "tigyawat", "oily face", "pimple"],
+      "responses": ["Acne Care: 1. Wash face twice daily. 2. DO NOT pop pimples (it causes scars). 3. Change pillowcases often. 4. Avoid oily foods."]
+    },
+    {
+      "tag": "dandruff",
+      "patterns": ["dandruff", "itchy scalp", "balakubak"],
+      "responses": ["Dandruff: Use an anti-dandruff shampoo containing Zinc or Salicylic acid. Avoid scratching your scalp."]
+    },
+    {
+      "tag": "bad_breath",
+      "patterns": ["bad breath", "mabaho hininga", "smelly mouth"],
+      "responses": ["Bad Breath: Brush your teeth AND your tongue. Floss daily. Drink plenty of water to avoid dry mouth."]
+    },
+    {
+      "tag": "burns",
+      "patterns": ["burn", "napaso", "minor burn", "paso"],
+      "responses": ["First Aid for Burns: Run COOL tap water over the burn for 10-15 minutes. Do NOT put ice or toothpaste. Apply aloe vera if available."]
+    },
+    {
+      "tag": "cuts",
+      "patterns": ["cut", "bleeding", "wound", "nasugatan", "dugo", "sugat"],
+      "responses": ["First Aid for Cuts: 1. Wash with soap and water. 2. Apply pressure to stop bleeding. 3. Apply betadine/ointment and cover with a bandage."]
+    },
+    {
+      "tag": "nosebleed",
+      "patterns": ["nosebleed", "balinguyngoy", "nose bleeding"],
+      "responses": ["Nosebleed: Lean slightly FORWARD (not back). Pinch the soft part of your nose for 10 minutes. Breathe through your mouth."]
+    },
+    {
+      "tag": "dog_bite",
+      "patterns": ["dog bite", "cat bite", "kagat", "rabies", "aso", "pusa"],
+      "responses": ["Animal Bite: Wash the wound thoroughly with soap and water for 15 minutes. Go to a hospital/animal bite center IMMEDIATELY for shots."]
+    },
+    {
+      "tag": "high_blood",
+      "patterns": ["high blood", "hypertension", "blood pressure", "bp"],
+      "responses": ["High Blood Pressure: Reduce salt intake (iwas maalat). Avoid fatty meat. Take your maintenance medicine if prescribed."]
+    },
+    {
+      "tag": "diabetes",
+      "patterns": ["diabetes", "high sugar", "sugar level", "sugar"],
+      "responses": ["Diabetes Care: Avoid sugary drinks (softdrinks/iced tea). Eat brown rice instead of white. Monitor your blood sugar regularly."]
+    },
+    {
+      "tag": "dengue",
+      "patterns": ["dengue", "mosquito bite", "lamok"],
+      "responses": ["Dengue Watch: Watch for high fever, rashes, and pain behind eyes. If gums bleed, go to the hospital immediately."]
+    },
+    {
+      "tag": "panic_attack",
+      "patterns": ["panic attack", "cant breathe", "heart racing", "palpitation", "nenerbiyos"],
+      "responses": ["Panic Attack Aid: 1. Sit down. 2. Follow the 3-3-3 rule: Look at 3 things, listen to 3 sounds, move 3 body parts. 3. Breathe slowly."]
+    },
+    {
+      "tag": "depression",
+      "patterns": ["depressed", "sad", "hopeless", "lungkot", "ayoko na"],
+      "responses": ["I hear you. You are not alone. Please reach out to a friend, family member, or a professional. Mental health is just as important as physical health."]
+    },
+    {
+      "tag": "asthma",
+      "patterns": ["asthma", "wheezing", "hika", "hirap huminga"],
+      "responses": ["Asthma Attack: Sit upright (do not lie down). Use your inhaler immediately (1 puff every minute for 10 puffs). If it doesn't help, call for emergency help."]
+    },
+    {
+      "tag": "heart_attack",
+      "patterns": ["heart attack", "chest pressure", "pain left arm", "atake sa puso"],
+      "responses": ["CRITICAL WARNING: If you have severe chest pressure spreading to the jaw/arm, shortness of breath, and cold sweat, CALL AN AMBULANCE immediately."]
+    },
+    {
+      "tag": "stroke",
+      "patterns": ["stroke", "face drooping", "arm weakness", "slurred speech"],
+      "responses": ["Stroke Signs (FAST): Face drooping, Arm weakness, Speech difficulty, Time to call emergency. Rush to the hospital immediately."]
+    },
+    {
+      "tag": "uti",
+      "patterns": ["uti", "pain peeing", "masakit umihi", "urine infection", "ihi"],
+      "responses": ["UTI Advice: Drink plenty of water and Cranberry juice. Avoid holding your pee. If there is blood or fever, consult a doctor for antibiotics."]
+    },
+    {
+      "tag": "kidney_stones",
+      "patterns": ["kidney stone", "back pain side", "bato sa bato"],
+      "responses": ["Kidney Stones: Stay hydrated. Limit salt and animal protein. Severe pain with nausea requires immediate medical attention."]
+    },
+    {
+      "tag": "gout",
+      "patterns": ["gout", "rayuma", "big toe pain", "uric acid"],
+      "responses": ["Gout Management: Avoid high-purine foods like beans (monggo), red meat, shellfish, and alcohol. Drink plenty of water."]
+    },
+    {
+      "tag": "anemia",
+      "patterns": ["anemia", "pale", "dizzy", "maputla", "low blood"],
+      "responses": ["Anemia Tips: Eat iron-rich foods like leafy greens (malunggay), red meat, liver, and beans. Take Vitamin C to help absorb iron."]
+    },
+    {
+      "tag": "vertigo",
+      "patterns": ["vertigo", "spinning", "hilo", "umiikot paningin", "ikot"],
+      "responses": ["Vertigo Relief: Sit or lie down immediately. Avoid sudden head movements. Stare at a fixed object. Ginger tea may help with nausea."]
+    },
+    {
+      "tag": "chickenpox",
+      "patterns": ["chickenpox", "bulutong", "itchy blisters"],
+      "responses": ["Chickenpox: Isolate to prevent spreading. Do not scratch blisters. Take oatmeal baths for itching. Use Paracetamol for fever (NOT Aspirin)."]
+    },
+    {
+      "tag": "measles",
+      "patterns": ["measles", "tigdas", "red rash"],
+      "responses": ["Measles: Requires isolation. Stay hydrated. Vitamin A supplements are often recommended. Watch out for high fever and breathing problems."]
+    },
+    {
+      "tag": "constipation",
+      "patterns": ["constipation", "hard stool", "hirap tumae", "hindi makatae"],
+      "responses": ["Constipation Relief: Eat high-fiber foods (Papaya, Oatmeal, Vegetables). Drink warm water in the morning. Move and exercise."]
+    },
+    {
+      "tag": "hemorrhoids",
+      "patterns": ["hemorrhoids", "almoranas", "painful pwet"],
+      "responses": ["Hemorrhoids: Eat fiber to soften stool. Do sitz baths (warm water soak). Avoid straining when using the toilet."]
+    },
+    {
+      "tag": "ulcer",
+      "patterns": ["ulcer", "gastritis", "hapdi sikmura", "gutom sakit tiyan"],
+      "responses": ["Ulcer/Gastritis: Eat small, frequent meals. Avoid coffee, alcohol, spicy foods, and painkillers like ibuprofen on an empty stomach."]
+    },
+    {
+      "tag": "sore_eyes",
+      "patterns": ["sore eyes", "pink eye", "conjunctivitis", "mugto mata"],
+      "responses": ["Sore Eyes: Highly contagious! Wash hands frequently. Do not share towels. Apply a warm compress. If vision is affected, see a doctor."]
+    },
+    {
+      "tag": "ear_infection",
+      "patterns": ["ear ache", "ear pain", "sakit tenga", "tenga"],
+      "responses": ["Ear Pain: Keep the ear dry. Do not insert cotton buds. Use a warm compress outside the ear. If there is discharge, see a doctor."]
+    },
+    {
+      "tag": "dehydration",
+      "patterns": ["dehydrated", "dry mouth", "uhaw", "dark urine"],
+      "responses": ["Dehydration: Drink water or electrolyte drinks (Oresol/Gatorade) immediately. Signs of severe dehydration include confusion and no urine."]
+    },
+    {
+      "tag": "food_poisoning",
+      "patterns": ["food poisoning", "vomiting", "nasuka", "panis na pagkain"],
+      "responses": ["Food Poisoning: Rest your stomach for a few hours. Sip small amounts of water or electrolytes. Avoid solid foods until vomiting stops."]
+    },
+    {
+      "tag": "heat_stroke",
+      "patterns": ["heat stroke", "na heat stroke", "sobrang init"],
+      "responses": ["Heat Stroke: Move to a cool place immediately. Remove excess clothing. Cool the body with water/ice packs. This is a medical emergency."]
+    },
+    {
+      "tag": "pcos",
+      "patterns": ["pcos", "irregular period", "ovary"],
+      "responses": ["PCOS: Maintain a healthy weight through diet and exercise. Limit carbs and sugar. Consult an OB-GYN for hormonal management."]
+    },
+    {
+      "tag": "menstrual_cramps",
+      "patterns": ["dysmenorrhea", "period pain", "sakit puson", "regla"],
+      "responses": ["Period Pain: Use a hot water bag on your lower tummy. Drink warm water. Avoid caffeine and salty foods."]
+    },
+    {
+      "tag": "pregnancy_signs",
+      "patterns": ["pregnant", "buntis", "delayed period", "morning sickness"],
+      "responses": ["Early Pregnancy Signs: Missed period, nausea (morning sickness), breast tenderness, and frequent urination. Take a test to be sure."]
+    },
+    {
+      "tag": "vitamins",
+      "patterns": ["vitamins", "what vitamin to take", "supplements"],
+      "responses": ["Vitamins: Vit C for immunity, Vit D for bones, Iron for blood, Vit B for energy/nerves. Always eat fruits/veggies first before supplements."]
+    },
+    {
+      "tag": "hair_loss",
+      "patterns": ["hair loss", "falling hair", "kalbo"],
+      "responses": ["Hair Loss: Can be caused by stress, genetics, or diet. Eat protein and iron. Use mild shampoo. Avoid tight hairstyles."]
+    },
+    {
+      "tag": "eczema",
+      "patterns": ["eczema", "skin asthma", "itchy skin", "rashes"],
+      "responses": ["Eczema: Keep skin moisturized (use lotion/petroleum jelly). Avoid harsh soaps with fragrance. Avoid scratching."]
+    },
+    {
+      "tag": "ringworm",
+      "patterns": ["ringworm", "buni", "fungal infection"],
+      "responses": ["Ringworm: Keep the area dry. Use antifungal cream (like Ketoconazole) regularly for 2-4 weeks. Do not share towels."]
+    },
+    {
+      "tag": "hangover",
+      "patterns": ["hangover", "lasing", "sakit ulo alak"],
+      "responses": ["Hangover Cure: Drink lots of water to rehydrate. Eat a good meal with carbs. Sleep it off. Avoid 'hair of the dog' (drinking more)."]
+    },
+    {
+      "tag": "motion_sickness",
+      "patterns": ["motion sickness", "byahe", "nahihilo sa sasakyan", "car sick"],
+      "responses": ["Motion Sickness: Look at the horizon (don't look at your phone). Sit in the front seat. Chew ginger candy or take Bonamine before travel."]
+    },
+    {
+      "tag": "appendicitis",
+      "patterns": ["appendicitis", "right side stomach pain", "sakit sa kanan tiyan"],
+      "responses": ["Appendicitis Warning: Sharp pain on the lower RIGHT side of the stomach, especially if it gets worse when moving/coughing. Go to the ER immediately."]
+    },
+    {
+      "tag": "cpr",
+      "patterns": ["cpr", "revive", "walang malay", "not breathing", "heart stop"],
+      "responses": ["CPR Guide: 1. Call for help/ambulance. 2. Push hard and fast in the center of the chest (100-120 beats per minute). 3. Continue until help arrives."]
+    },
+    {
+      "tag": "choking",
+      "patterns": ["choking", "nabulunan", "cant breathe food", "heimlich"],
+      "responses": ["Choking First Aid: Perform the Heimlich Maneuver. Stand behind them, wrap arms around waist, and make a fist above the navel. Thrust IN and UP hard."]
+    },
+    {
+      "tag": "fainting",
+      "patterns": ["fainted", "hinimatay", "nawalan ng malay", "dizzy pass out"],
+      "responses": ["Fainting First Aid: Lay the person flat on their back. Elevate their legs higher than their heart. Loosen tight clothing. Do not give water until fully awake."]
+    },
+    {
+      "tag": "tetanus",
+      "patterns": ["tetanus", "rusty nail", "kalawang", "pako", "wound metal"],
+      "responses": ["Tetanus Warning: If punctured by a rusty or dirty object, clean the wound immediately. Go to a health center for a Tetanus Toxoid injection within 24 hours."]
+    },
+    {
+      "tag": "stye",
+      "patterns": ["stye", "kuliti", "eye bump", "pimples in eye"],
+      "responses": ["Stye (Kuliti): Do NOT pop it. Apply a warm compress (warm towel) for 10-15 minutes, 3 times a day. It usually drains on its own."]
+    },
+    {
+      "tag": "hiccups",
+      "patterns": ["hiccups", "sinok", "cant stop hiccups"],
+      "responses": ["Hiccup Cure: Hold your breath for 10 seconds. Drink a glass of cold water quickly. Swallow a teaspoon of sugar."]
+    },
+    {
+      "tag": "keto_diet",
+      "patterns": ["keto", "ketogenic", "no carbs", "high fat diet"],
+      "responses": ["Keto Diet: A low-carb, high-fat diet. You eat meat, fish, eggs, and healthy oils, but avoid rice, bread, and sugar. Consult a doctor before starting."]
+    },
+    {
+      "tag": "intermittent_fasting",
+      "patterns": ["intermittent fasting", "if diet", "fasting", "16:8"],
+      "responses": ["Intermittent Fasting (IF): A pattern of eating. Common is 16:8 (Fast for 16 hours, eat within an 8-hour window). Helps with weight loss and insulin sensitivity."]
+    },
+    {
+      "tag": "smoking",
+      "patterns": ["stop smoking", "yosi", "cigarettes", "masama paninigarilyo"],
+      "responses": ["Quit Smoking: Smoking causes lung cancer and heart disease. Try nicotine gum/patches. Your lungs start repairing themselves 20 minutes after you quit."]
+    },
+    {
+      "tag": "alcohol",
+      "patterns": ["alcohol", "alak", "drinking problem", "liver"],
+      "responses": ["Alcohol Advice: Limit intake. Excessive drinking damages the liver (Cirrhosis). Men: max 2 drinks/day. Women: max 1 drink/day."]
+    },
+    {
+      "tag": "body_odor",
+      "patterns": ["body odor", "mabaho kili kili", "putok", "bad smell"],
+      "responses": ["Body Odor: Shower daily with antibacterial soap. Use antiperspirant/deodorant. Wear breathable fabrics like cotton. Wash clothes thoroughly."]
+    },
+    {
+      "tag": "sleep_paralysis",
+      "patterns": ["sleep paralysis", "bangungot", "cant move sleeping"],
+      "responses": ["Sleep Paralysis (Bangungot): It happens when your mind wakes up but your body is still asleep. It is scary but usually harmless. Try to wiggle your toes to wake up."]
+    },
+    {
+      "tag": "myth_wet_hair",
+      "patterns": ["sleep wet hair", "basa buhok matulog", "blindness wet hair"],
+      "responses": ["Myth Buster: Sleeping with wet hair DOES NOT cause blindness or insanity. However, it can cause hair breakage or fungal infections on the pillow."]
+    },
+    {
+      "tag": "myth_knuckles",
+      "patterns": ["cracking knuckles", "lagutok", "arthritis myth"],
+      "responses": ["Myth Buster: Cracking your knuckles DOES NOT cause arthritis. The sound is just gas bubbles popping in the fluid between joints."]
+    },
+    {
+      "tag": "myth_pasma",
+      "patterns": ["pasma", "shaking hands", "sweaty hands", "cold water tired"],
+      "responses": ["Medical Fact: 'Pasma' is not a medical term. Hand tremors or sweating can be caused by tired muscles, nerves, or thyroid issues. Rest usually helps."]
+    },
+    {
+      "tag": "caffeine",
+      "patterns": ["coffee", "caffeine", "kape", "palpitation coffee"],
+      "responses": ["Caffeine: Good for energy but too much causes palpitations and anxiety. Limit to 400mg (approx 4 cups) per day."]
+    },
+    {
+      "tag": "screen_time",
+      "patterns": ["eye strain phone", "screen time", "malabo mata cellphone"],
+      "responses": ["Digital Eye Strain: Follow the 20-20-20 rule. Every 20 minutes, look at something 20 feet away for 20 seconds to rest your eyes."]
+    },
+    {
+      "tag": "cholesterol",
+      "patterns": ["cholesterol", "fatty foods", "high blood pressure food"],
+      "responses": ["Lower Cholesterol: Reduce saturated fats (fried chicken, pork fat). Eat more fiber (oatmeal, beans). Exercise regularly."]
+    },
+    {
+      "tag": "sunburn",
+      "patterns": ["sunburn", "sun burn", "hapdi balat araw"],
+      "responses": ["Sunburn Relief: Take a cool shower. Apply Aloe Vera gel or moisturizing lotion. Drink water. Do not peel the loose skin."]
+    },
+    {
+      "tag": "lice",
+      "patterns": ["lice", "kuto", "head lice", "makati ulo"],
+      "responses": ["Head Lice (Kuto): Use a medicated shampoo (Permethrin). Use a fine-tooth comb (suyod). Wash all beddings in hot water."]
+    },
+    {
+      "tag": "athlete_foot",
+      "patterns": ["athlete's foot", "fungus foot", "alipunga", "itchy feet"],
+      "responses": ["Athlete's Foot: Keep feet dry. Change socks daily. Use antifungal powder or cream. Don't walk barefoot in public showers."]
+    },
+    {
+      "tag": "scabies",
+      "patterns": ["scabies", "galis", "itchy night"],
+      "responses": ["Scabies: Caused by mites. It is very contagious. You need a prescription cream (Permethrin) from a doctor. Wash all clothes in hot water."]
+    },
+    {
+      "tag": "boil",
+      "patterns": ["boil", "piga", "pigsa", "painful bump"],
+      "responses": ["Boil (Pigsa): Apply warm compress to help it drain. Do NOT squeeze or pop it (infection might spread). If it's big or you have a fever, see a doctor."]
+    },
+    {
+      "tag": "canker_sore",
+      "patterns": ["canker sore", "singaw", "mouth sore"],
+      "responses": ["Mouth Sore (Singaw): Avoid spicy/salty foods. Gargle with warm salt water. Apply over-the-counter gels for pain relief."]
+    },
+    {
+      "tag": "blisters",
+      "patterns": ["blister", "lapnos", "shoes hurt"],
+      "responses": ["Blisters: Do not pop them to prevent infection. Cover with a bandage. If it pops, clean with soap and water and apply antibiotic ointment."]
+    },
+    {
+      "tag": "snoring",
+      "patterns": ["snoring", "hilik", "maingay matulog", "stop snoring"],
+      "responses": ["Snoring Tips: Sleep on your SIDE, not your back. Maintain a healthy weight. Avoid alcohol before bed. Elevate your head with pillows."]
+    },
+    {
+      "tag": "heat_rash",
+      "patterns": ["heat rash", "bungang araw", "prickly heat", "red spots back"],
+      "responses": ["Heat Rash (Bungang Araw): Keep the area cool and dry. Wear loose cotton clothes. Apply baby powder or calamine lotion to soothe itching."]
+    },
+    {
+      "tag": "varicose_veins",
+      "patterns": ["varicose veins", "ugat sa paa", "spider veins", "masakit binti"],
+      "responses": ["Varicose Veins: Elevate your legs when resting. Avoid standing or sitting for too long. Wear compression stockings if recommended by a doctor."]
+    },
+    {
+      "tag": "stiff_neck",
+      "patterns": ["stiff neck", "ngalay leeg", "cant turn head", "pain neck"],
+      "responses": ["Stiff Neck: Use a hot compress to relax muscles. Gently stretch your neck side to side. Check your pillow height (it might be too high)."]
+    },
+    {
+      "tag": "ingrown",
+      "patterns": ["ingrown", "ingrown nail", "sakit kuko", "toe pain"],
+      "responses": ["Ingrown Nail: Soak foot in warm salt water for 15 mins. Do not cut the nail too short or curved. If infected (pus/nana), see a doctor."]
+    },
+    {
+      "tag": "eye_twitching",
+      "patterns": ["eye twitching", "nanginginig mata", "twitching eyelid", "pamahiin mata"],
+      "responses": ["Eye Twitching: Usually caused by stress, lack of sleep, or too much caffeine. Rest your eyes and sleep more. It is NOT a superstitious sign."]
+    },
+    {
+      "tag": "dry_eyes",
+      "patterns": ["dry eyes", "hapdi mata", "dry contact lens"],
+      "responses": ["Dry Eyes: Blink more often when using computers. Use lubricating eye drops (artificial tears). Stay hydrated."]
+    },
+    {
+      "tag": "foreign_object_eye",
+      "patterns": ["napuwing", "dust in eye", "something in eye", "masakit mata"],
+      "responses": ["Object in Eye (Puwing): Do NOT rub your eye! Blink rapidly to produce tears. Flush eye with clean water. If it doesn't come out, go to the ER."]
+    },
+    {
+      "tag": "splinter",
+      "patterns": ["splinter", "salubsob", "tinik sa daliri", "wood in skin"],
+      "responses": ["Splinter (Salubsob): Wash hands. Sterilize tweezers with alcohol. Gently pull the splinter out in the same direction it entered. Clean with soap."]
+    },
+    {
+      "tag": "callus",
+      "patterns": ["callus", "kalyo", "corns feet", "hard skin"],
+      "responses": ["Callus (Kalyo): Soak feet in warm water. Use a pumice stone to gently scrub dead skin. Apply moisturizer daily."]
+    },
+    {
+      "tag": "laryngitis",
+      "patterns": ["lost voice", "paos", "hoarse voice", "cant speak"],
+      "responses": ["Lost Voice (Paos): Rest your voice (don't whisper, just stay quiet). Drink plenty of warm water. Avoid cold drinks and sweets."]
+    },
+    {
+      "tag": "bloating",
+      "patterns": ["bloated", "kabag", "gassy", "farting", "lumalaki tiyan"],
+      "responses": ["Bloating: Eat slowly and chew food well. Avoid carbonated drinks (softdrinks) and chewing gum. Ginger tea helps relieve gas."]
+    },
+    {
+      "tag": "dark_underarms",
+      "patterns": ["dark underarms", "maitim kili kili", "whitening"],
+      "responses": ["Underarm Care: Avoid tight clothes. Use mild, alcohol-free deodorants. Exfoliate gently. Home remedy: Rub lemon/calamansi (cautiously) and rinse."]
+    },
+    {
+      "tag": "stretch_marks",
+      "patterns": ["stretch marks", "kamot", "scars stomach"],
+      "responses": ["Stretch Marks: Keep skin hydrated with cocoa butter or Vitamin E oil. They are natural and fade over time, but hard to remove completely without laser."]
+    },
+    {
+      "tag": "best_time_vitamins",
+      "patterns": ["when to take vitamins", "best time supplements", "morning or night vitamins"],
+      "responses": ["Vitamin Timing: Multivitamins and Vitamin B are best taken in the MORNING (for energy). Magnesium is good at NIGHT (for sleep). Always take with food."]
+    },
+    {
+      "tag": "probiotics",
+      "patterns": ["probiotics", "yakult", "yogurt", "good bacteria"],
+      "responses": ["Probiotics: Good for digestion and immunity. Found in Yogurt, Yakult, Kimchi, and Miso. Helps prevent diarrhea and bloating."]
+    },
+    {
+      "tag": "cracked_heels",
+      "patterns": ["cracked heels", "bitak bitak paa", "dry feet"],
+      "responses": ["Cracked Heels: Scrub gently with a stone. Apply thick moisturizer or petroleum jelly before bed and wear socks overnight."]
+    },
+    {
+      "tag": "nose_block",
+      "patterns": ["blocked nose", "barado ilong", "cant breathe nose"],
+      "responses": ["Blocked Nose: Steam inhalation (Tuob). Keep your head elevated when sleeping. Spicy food might help clear sinuses temporarily."]
+    },
+    {
+      "tag": "oily_face",
+      "patterns": ["oily face", "oil control", "mantika mukha"],
+      "responses": ["Oily Face Tips: Wash face morning and night (don't over-wash). Use oil-free or water-based moisturizers. Use blotting paper during the day."]
+    },
+    {
+      "tag": "dark_circles",
+      "patterns": ["dark circles", "eye bags", "itim mata", "panda eyes"],
+      "responses": ["Dark Circles: Sleep at least 7-8 hours. Place cold cucumber slices or cold spoons on eyes to reduce puffiness. Stay hydrated."]
+    },
+    {
+      "tag": "abs_exercise",
+      "patterns": ["how to get abs", "abs workout", "tiyan exercise", "belly fat exercise"],
+      "responses": ["Abs Tips: 1. Planks (30 seconds). 2. Crunches. 3. Leg raises. Remember: 'Abs are made in the kitchen'—reduce sugar and fried foods."]
+    },
+    {
+      "tag": "cardio",
+      "patterns": ["cardio", "jogging", "best exercise weight loss", "running"],
+      "responses": ["Best Cardio: Jogging, Swimming, and Jumping Rope burn the most calories. Aim for at least 30 minutes, 3-4 times a week."]
+    },
+    {
+      "tag": "yoga",
+      "patterns": ["yoga", "flexibility", "stretching", "exercise for stress"],
+      "responses": ["Yoga Benefits: Improves flexibility, reduces stress, and strengthens muscles. Try 'Child's Pose' for relaxation."]
+    },
+    {
+      "tag": "muscle_pain_gym",
+      "patterns": ["muscle soreness", "sakit katawan gym", "doms", "body pain exercise"],
+      "responses": ["DOMS (Muscle Soreness): It's normal after exercise. Rest, hydrate, and do light stretching. It usually goes away in 2-3 days."]
+    },
+    {
+      "tag": "ginger_benefits",
+      "patterns": ["ginger", "luya", "salabat", "ginger tea benefits"],
+      "responses": ["Ginger Benefits: Great for sore throat (salabat), nausea/vomiting, and relieving stomach gas. It is natural and safe."]
+    },
+    {
+      "tag": "turmeric",
+      "patterns": ["turmeric", "luyang dilaw", "curcumin"],
+      "responses": ["Turmeric: A strong anti-inflammatory. Good for arthritis and joint pain. Often drunk as tea with honey."]
+    },
+    {
+      "tag": "eggs_health",
+      "patterns": ["are eggs healthy", "itlog", "cholesterol eggs"],
+      "responses": ["Eggs: They are a 'Superfood'. High in protein and vitamins. 1-2 eggs a day is generally safe for most people."]
+    },
+    {
+      "tag": "chocolate_health",
+      "patterns": ["is chocolate healthy", "dark chocolate", "tsokolate"],
+      "responses": ["Chocolate: DARK chocolate (70% cocoa) is healthy and good for the heart in small amounts. Milk chocolate has too much sugar."]
+    },
+    {
+      "tag": "rice_alternatives",
+      "patterns": ["rice alternative", "no rice", "brown rice", "corn rice"],
+      "responses": ["Rice Alternatives: Brown rice (more fiber), Corn (low glycemic index), Quinoa, or Sweet Potato (Kamote)."]
+    },
+    {
+      "tag": "baby_fever",
+      "patterns": ["baby fever", "lagnat baby", "medicine for baby"],
+      "responses": ["Baby Fever: Do NOT give Aspirin. Use Paracetamol drops (prescribed by pedia). Do a sponge bath with lukewarm water. Breastfeed frequently."]
+    },
+    {
+      "tag": "diaper_rash",
+      "patterns": ["diaper rash", "pula pwet baby", "rash baby"],
+      "responses": ["Diaper Rash: Change diapers frequently. Keep the area dry. Apply petroleum jelly or zinc oxide cream. Air dry the baby's skin."]
+    },
+    {
+      "tag": "teething",
+      "patterns": ["teething", "tumutubo ngipin baby", "baby crying"],
+      "responses": ["Teething: Massage gums with a clean finger. Give a cold (not frozen) teething ring. Wipe drool to prevent rashes."]
+    },
+    {
+      "tag": "breastfeeding",
+      "patterns": ["breastfeeding", "gatas ng ina", "increase milk supply"],
+      "responses": ["Breastfeeding: Best for baby's immunity. To increase milk: Drink malunggay soup, stay hydrated, and nurse often (latch creates supply)."]
+    },
+    {
+      "tag": "dog_bite_vaccine",
+      "patterns": ["anti rabies", "dog bite injection", "bakuna aso"],
+      "responses": ["Anti-Rabies: It is LIFE SAVING. You typically need 3-4 doses (Day 0, 3, 7, and sometimes 14/28). Never skip a dose."]
+    },
+    {
+      "tag": "tuberculosis",
+      "patterns": ["tb", "tuberculosis", "coughing blood", "ubo dugo"],
+      "responses": ["TB Signs: Cough lasting >2 weeks, weight loss, night sweats. TB is curable with 6 months of continuous medication. Go to a Brgy Health Center."]
+    },
+    {
+      "tag": "pneumonia",
+      "patterns": ["pneumonia", "difficulty breathing", "lung infection"],
+      "responses": ["Pneumonia: High fever, chills, and difficulty breathing. Requires antibiotics. Very dangerous for kids and seniors."]
+    },
+    {
+      "tag": "typhoid",
+      "patterns": ["typhoid", "dirty water", "fever stomach pain"],
+      "responses": ["Typhoid: Caused by dirty food/water. Symptoms: High fever, headache, stomach pain. Prevention: Wash hands and boil drinking water."]
+    },
+    {
+      "tag": "malaria",
+      "patterns": ["malaria", "mosquito night", "shaking chills"],
+      "responses": ["Malaria: Spread by mosquitoes (mostly at night/mountains). Symptoms: Cycles of extreme cold chills and high fever. Use mosquito nets."]
+    },
+    {
+      "tag": "kidney_care",
+      "patterns": ["healthy kidney", "iwas dialysis", "alaga bato"],
+      "responses": ["Kidney Care: 1. Drink enough water. 2. Limit salty foods (noodles, chips, patis). 3. Don't hold your pee. 4. Control blood sugar."]
+    }
+  ]
+}
